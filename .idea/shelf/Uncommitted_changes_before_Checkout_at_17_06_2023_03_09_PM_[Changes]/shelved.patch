@@ -1,0 +1,38 @@
+Index: src/main/java/QA/Project/Controller/UIController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package QA.Project.Controller;\r\n\r\nimport QA.Project.Entity.CurrencyEntity;\r\nimport org.springframework.ui.Model;\r\nimport org.springframework.web.bind.annotation.GetMapping;\r\nimport org.springframework.web.bind.annotation.RestController;\r\n\r\n@RestController\r\npublic class UIController {\r\n    @GetMapping(\"/\")\r\n    public String getConversionPage(Model model) {\r\n        model.addAttribute(\"conversionData\", new CurrencyEntity());\r\n        return \"index\";\r\n    }\r\n}\r\n
+===================================================================
+diff --git a/src/main/java/QA/Project/Controller/UIController.java b/src/main/java/QA/Project/Controller/UIController.java
+--- a/src/main/java/QA/Project/Controller/UIController.java	
++++ b/src/main/java/QA/Project/Controller/UIController.java	
+@@ -3,9 +3,11 @@
+ import QA.Project.Entity.CurrencyEntity;
+ import org.springframework.ui.Model;
+ import org.springframework.web.bind.annotation.GetMapping;
++import org.springframework.web.bind.annotation.RequestMapping;
+ import org.springframework.web.bind.annotation.RestController;
+ 
+ @RestController
++@RequestMapping("/")
+ public class UIController {
+     @GetMapping("/")
+     public String getConversionPage(Model model) {
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"ExternalStorageConfigurationManager\" enabled=\"true\" />\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_17\" default=\"true\" project-jdk-name=\"17\" project-jdk-type=\"JavaSDK\" />\r\n</project>
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+--- a/.idea/misc.xml	
++++ b/.idea/misc.xml	
+@@ -1,5 +1,8 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="ExternalStorageConfigurationManager" enabled="true" />
++  <component name="FrameworkDetectionExcludesConfiguration">
++    <file type="web" url="file://$PROJECT_DIR$" />
++  </component>
+   <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="17" project-jdk-type="JavaSDK" />
+ </project>
+\ No newline at end of file

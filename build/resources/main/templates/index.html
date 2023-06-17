@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Currency Conversion</title>
+</head>
+<body>
+<h1>Currency Conversion</h1>
+<div id="toastr" hidden="true">
+
+</div>
+<form id="conversionForm" >
+    <label for="amount">Amount:</label>
+    <input type="number" name="amount" id="amount" required>
+    <br><br>
+    <label for="from">From:</label>
+    <input type="text" name="source" id="from" required>
+    <br><br>
+    <label for="to">To:</label>
+    <input type="text" name="target" id="to" required>
+    <br><br>
+    <button type="submit">Convert</button>
+</form>
+
+<br><br>
+<h2 id="result"></h2>
+<h2 id="rate"></h2>
+<!--
+<h2>Conversion Result</h2>
+<p th:text="  ${apiResult}" />
+<h3>Rate:</h3>
+<p th:text="  ${rate}" />
+-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/index.js"></script>
+</body>
+</html>
