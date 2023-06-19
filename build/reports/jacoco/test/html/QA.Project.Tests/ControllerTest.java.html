@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ControllerTest.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Project</a> &gt; <a href="index.source.html" class="el_package">QA.Project.Tests</a> &gt; <span class="el_source">ControllerTest.java</span></div><h1>ControllerTest.java</h1><pre class="source lang-java linenums">package QA.Project.Tests;
+
+import QA.Project.Controller.CurrencyController;
+import QA.Project.Entity.CurrencyEntity;
+import jakarta.validation.constraints.Null;
+import org.junit.Before;
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.EmptySource;
+import org.junit.jupiter.params.provider.NullSource;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.server.ResponseStatusException;
+
+import java.util.Date;
+import java.util.List;
+
+@Nested
+@SpringBootTest
+@TestMethodOrder(MethodOrderer.OrderAnnotation.class)
+<span class="nc" id="L25">public class ControllerTest {</span>
+    @Autowired
+    @Qualifier(&quot;currencyController&quot;)
+    private CurrencyController _CurrencyController;
+
+    @Test
+    @Order(0)
+    public void AddCurrency_Success(){
+<span class="nc" id="L33">        CurrencyEntity entity = new CurrencyEntity();</span>
+<span class="nc" id="L34">        entity.setRate(11.0);</span>
+<span class="nc" id="L35">        entity.setDate(new Date());</span>
+<span class="nc" id="L36">        entity.setSourceCurrency(&quot;Example1&quot;);</span>
+<span class="nc" id="L37">        entity.setTargetCurrency(&quot;Example2&quot;);</span>
+<span class="nc" id="L38">        ResponseEntity response =  _CurrencyController.AddCurrency(entity);</span>
+<span class="nc" id="L39">        Assertions.assertEquals(response.getStatusCode(), HttpStatus.OK);</span>
+<span class="nc" id="L40">        Assertions.assertNotNull(response.getBody());</span>
+
+<span class="nc" id="L42">    }</span>
+    @Test
+    @Order(3)
+    public void RemoveCurrency(){
+<span class="nc" id="L46">        List&lt;CurrencyEntity&gt; all = _CurrencyController.getAllRates().getBody();</span>
+<span class="nc" id="L47">        CurrencyEntity tobeDeleted = all.get(all.size()-1);</span>
+<span class="nc" id="L48">       ResponseEntity result = _CurrencyController.deleteCurrency(tobeDeleted.id);</span>
+<span class="nc" id="L49">       Assertions.assertEquals(HttpStatus.OK, result.getStatusCode());</span>
+<span class="nc" id="L50">    }</span>
+
+    @ParameterizedTest
+    @NullSource
+    public void AddCurrency_null(CurrencyEntity currencyEntity){
+<span class="nc" id="L55">        ResponseEntity response = _CurrencyController.AddCurrency(currencyEntity);</span>
+<span class="nc" id="L56">        Assertions.assertEquals(HttpStatus.NOT_FOUND,response.getStatusCode());</span>
+<span class="nc" id="L57">    }</span>
+    @Test
+    public void AddCurrency_Empty(){
+<span class="nc" id="L60">        CurrencyEntity currency = new CurrencyEntity();</span>
+<span class="nc" id="L61">        ResponseEntity response = _CurrencyController.AddCurrency(currency);</span>
+<span class="nc" id="L62">        Assertions.assertEquals(HttpStatus.NOT_FOUND,response.getStatusCode());</span>
+<span class="nc" id="L63">    }</span>
+    @Test
+    public void GetCurrency(){
+<span class="nc" id="L66">        ResponseEntity response = _CurrencyController.getCurrency(1L);</span>
+<span class="nc" id="L67">        Assertions.assertEquals(HttpStatus.OK,response.getStatusCode());</span>
+<span class="nc" id="L68">    }</span>
+    @Test
+    public void GetCurrency_DoesntExist(){
+<span class="nc" id="L71">        RuntimeException exception = Assertions.assertThrows(RuntimeException.class, () -&gt; {</span>
+<span class="nc" id="L72">            _CurrencyController.getCurrency(100000L);</span>
+<span class="nc" id="L73">        });</span>
+<span class="nc" id="L74">        Assertions.assertEquals(HttpStatus.NOT_FOUND.toString(),exception.getMessage());</span>
+<span class="nc" id="L75">    }</span>
+    @ParameterizedTest
+    @CsvSource({
+            &quot;USD, BHD, 100, 265.0&quot;,  // sourceCurrency, targetCurrency, amount, expectedConvertedAmount
+            &quot;GBP, KWD, 200, 509.375&quot;,
+            &quot;USD, ILS, , 3.74&quot;
+    })
+    public void ConvertCurrency(String sourceCurrency, String targetCurrency, Double amount, Double expectedConvertedAmount){
+<span class="nc" id="L83">        ResponseEntity response = _CurrencyController.convertCurrency(sourceCurrency,targetCurrency,amount);</span>
+<span class="nc" id="L84">        Assertions.assertEquals(expectedConvertedAmount,response.getBody());</span>
+<span class="nc" id="L85">        Assertions.assertEquals(HttpStatus.OK, response.getStatusCode());</span>
+
+<span class="nc" id="L87">    }</span>
+    @Test
+    public void GetAll(){
+<span class="nc" id="L90">        ResponseEntity response = _CurrencyController.getAllRates();</span>
+<span class="nc" id="L91">        Assertions.assertAll(&quot;Response validation&quot;,</span>
+                () -&gt; {
+<span class="nc" id="L93">                    System.out.println(&quot;Verifying response status code&quot;);</span>
+<span class="nc" id="L94">                    Assertions.assertEquals(HttpStatus.OK, response.getStatusCode(), &quot;Response status should be OK&quot;);</span>
+<span class="nc" id="L95">                },</span>
+                () -&gt; {
+<span class="nc" id="L97">                    System.out.println(&quot;Verifying response body&quot;);</span>
+<span class="nc" id="L98">                    Assertions.assertNotNull(response.getBody(), &quot;Response body should not be null&quot;);</span>
+<span class="nc" id="L99">                }</span>
+        );
+<span class="nc" id="L101">    }</span>
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

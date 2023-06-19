@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CurrencyController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Project</a> &gt; <a href="index.source.html" class="el_package">QA.Project.Controller</a> &gt; <span class="el_source">CurrencyController.java</span></div><h1>CurrencyController.java</h1><pre class="source lang-java linenums">package QA.Project.Controller;
+
+import QA.Project.Entity.CurrencyEntity;
+import QA.Project.Service.CurrencyService;
+import jakarta.validation.Valid;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+@RestController
+@RequestMapping(&quot;/api/currency&quot;)
+public class CurrencyController {
+    private final CurrencyService _CurrencyService;
+
+<span class="fc" id="L17">    public CurrencyController(CurrencyService currencyService) {</span>
+<span class="fc" id="L18">        _CurrencyService = currencyService;</span>
+<span class="fc" id="L19">    }</span>
+
+
+    @PostMapping(&quot;/&quot;)
+    public ResponseEntity&lt;CurrencyEntity&gt; AddCurrency(@Valid @RequestBody CurrencyEntity currency){
+<span class="fc bfc" id="L24" title="All 2 branches covered.">        if(currency!= null){</span>
+<span class="fc bfc" id="L25" title="All 2 branches covered.">            if (_CurrencyService.isEmpty(currency)){</span>
+<span class="fc" id="L26">                return new ResponseEntity&lt;&gt;(HttpStatus.NOT_FOUND);</span>
+            }
+<span class="fc" id="L28">            CurrencyEntity entity = _CurrencyService.addCurrency(currency);</span>
+<span class="fc" id="L29">            System.out.println(entity.toString());</span>
+<span class="fc" id="L30">            return new ResponseEntity(entity, HttpStatus.OK);</span>
+        }
+<span class="fc" id="L32">        return new ResponseEntity&lt;&gt;(HttpStatus.NOT_FOUND);</span>
+    }
+    @GetMapping(&quot;/{id}&quot;)
+    public ResponseEntity&lt;CurrencyEntity&gt; getCurrency(@PathVariable Long id){
+<span class="fc" id="L36">        return new ResponseEntity&lt;&gt;(_CurrencyService.getCurrency(id),HttpStatus.OK);</span>
+    }
+    @DeleteMapping(&quot;/{id}&quot;)
+    public ResponseEntity deleteCurrency(@PathVariable Long id){
+<span class="fc" id="L40">        _CurrencyService.removeCurrency(id);</span>
+<span class="fc" id="L41">        return new ResponseEntity(HttpStatus.OK);</span>
+    }
+    @GetMapping(&quot;/&quot;)
+    public ResponseEntity&lt;List&lt;CurrencyEntity&gt;&gt; getAllRates(){
+<span class="fc" id="L45">        List&lt;CurrencyEntity&gt; list = _CurrencyService.getAllRates();</span>
+<span class="fc" id="L46">        return new ResponseEntity&lt;&gt;(list,HttpStatus.OK);</span>
+    }
+    @GetMapping(&quot;/convert&quot;)
+    public ResponseEntity&lt;Double&gt; convertCurrency(@RequestParam(&quot;source&quot;) String sourceCurrency,
+                                                  @RequestParam(&quot;target&quot;) String targetCurrency,
+                                                  @RequestParam(name = &quot;amount&quot;, required = false) Double amount ) {
+
+        // Logic to convert the currency
+<span class="fc" id="L54">        Double rate = _CurrencyService.convertCurrency(sourceCurrency,targetCurrency);;</span>
+        // Retrieve the conversion rate based on source and target currencies
+
+        // Calculate the converted amount
+<span class="fc" id="L58">        Double convertedAmount =rate;</span>
+<span class="fc bfc" id="L59" title="All 2 branches covered.">        if(amount != null) {</span>
+<span class="fc" id="L60">            convertedAmount= rate * amount;</span>
+        }
+
+        // Return the converted amount
+<span class="fc" id="L64">        return ResponseEntity.ok(convertedAmount);</span>
+    }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

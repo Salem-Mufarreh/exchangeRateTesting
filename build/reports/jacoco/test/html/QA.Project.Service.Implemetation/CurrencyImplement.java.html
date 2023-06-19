@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CurrencyImplement.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Project</a> &gt; <a href="index.source.html" class="el_package">QA.Project.Service.Implemetation</a> &gt; <span class="el_source">CurrencyImplement.java</span></div><h1>CurrencyImplement.java</h1><pre class="source lang-java linenums">package QA.Project.Service.Implemetation;
+
+import QA.Project.Entity.CurrencyEntity;
+import QA.Project.Repository.CurrencyRep;
+import QA.Project.Service.CurrencyService;
+import net.bytebuddy.implementation.bytecode.Throw;
+import org.hibernate.service.spi.InjectService;
+import org.springframework.http.HttpStatus;
+import org.springframework.stereotype.Service;
+import org.springframework.web.server.ResponseStatusException;
+
+import java.sql.Time;
+import java.util.List;
+import java.util.Random;
+
+@Service
+public class CurrencyImplement implements CurrencyService {
+    private final CurrencyRep _CurrencyRepo;
+
+<span class="fc" id="L20">    public CurrencyImplement(CurrencyRep currencyRepo) {</span>
+<span class="fc" id="L21">        _CurrencyRepo = currencyRepo;</span>
+<span class="fc" id="L22">    }</span>
+
+    @Override
+    public CurrencyEntity addCurrency(CurrencyEntity currencyEntity) {
+<span class="fc" id="L26">        CurrencyEntity currency = new CurrencyEntity();</span>
+        try {
+<span class="fc" id="L28">            currencyEntity.setId(new Random().nextLong());</span>
+<span class="fc" id="L29">            currency = _CurrencyRepo.save(currencyEntity);</span>
+<span class="fc" id="L30">            return currency;</span>
+<span class="nc" id="L31">        }catch (Exception ex){</span>
+<span class="nc" id="L32">            return currency;</span>
+        }
+
+    }
+
+    @Override
+    public void removeCurrency(Long id) {
+<span class="fc" id="L39">        CurrencyEntity currencyEntity = getCurrency(id);</span>
+<span class="fc" id="L40">        _CurrencyRepo.delete(currencyEntity);</span>
+<span class="fc" id="L41">    }</span>
+
+    @Override
+    public List&lt;CurrencyEntity&gt; getAllRates() {
+<span class="fc" id="L45">        List&lt;CurrencyEntity&gt; CurrencyList = _CurrencyRepo.findAll();</span>
+<span class="fc" id="L46">        return CurrencyList;</span>
+    }
+
+    @Override
+    public Double convertCurrency(String source, String target) {
+<span class="fc bfc" id="L51" title="All 4 branches covered.">        if(source.isEmpty() || target.isEmpty() ){</span>
+<span class="fc" id="L52">            throw new IllegalArgumentException();</span>
+        }
+<span class="fc" id="L54">        CurrencyEntity Source = getCurrency(source);</span>
+<span class="fc" id="L55">        CurrencyEntity Target = getCurrency(target);</span>
+<span class="fc" id="L56">        double rate = (Target.rate/ Source.rate);</span>
+
+
+<span class="fc" id="L59">        return rate;</span>
+    }
+
+
+    @Override
+    public CurrencyEntity getCurrency(Long id) {
+<span class="fc" id="L65">        CurrencyEntity entity = _CurrencyRepo.findById(id).orElseThrow(()-&gt; new RuntimeException(String.valueOf(HttpStatus.NOT_FOUND)));</span>
+<span class="fc" id="L66">        return entity;</span>
+    }
+
+    @Override
+    public Boolean isEmpty(CurrencyEntity currency) {
+<span class="pc bpc" id="L71" title="1 of 4 branches missed.">        if(currency.getSourceCurrency()== null || currency.getTargetCurrency() == null</span>
+<span class="pc bpc" id="L72" title="2 of 4 branches missed.">            || currency.getDate() == null || currency.getRate()== null ){</span>
+<span class="fc" id="L73">            return true;</span>
+        }
+        else{
+<span class="fc" id="L76">            return false;</span>
+        }
+    }
+
+    public CurrencyEntity getCurrency(String name){
+<span class="fc" id="L81">        name = &quot;%&quot;+name+&quot;%&quot;;</span>
+<span class="fc" id="L82">        CurrencyEntity entity = _CurrencyRepo.getCurrencyEntitiesBySourceCurrency(name);</span>
+<span class="fc bfc" id="L83" title="All 2 branches covered.">        if (entity == null){</span>
+<span class="fc" id="L84">            throw new ResponseStatusException(HttpStatus.NOT_FOUND, name + &quot; is not available&quot;);</span>
+
+        }
+<span class="fc" id="L87">        return entity;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

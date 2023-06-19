@@ -18,13 +18,13 @@ public class CurrencyController {
         _CurrencyService = currencyService;
     }
 
-    @GetMapping("/gui")
-    public String showHomePage() {
-        return "index.html"; // Replace "index.html" with the actual name of your HTML file
-    }
+
     @PostMapping("/")
     public ResponseEntity<CurrencyEntity> AddCurrency(@Valid @RequestBody CurrencyEntity currency){
         if(currency!= null){
+            if (_CurrencyService.isEmpty(currency)){
+                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            }
             CurrencyEntity entity = _CurrencyService.addCurrency(currency);
             System.out.println(entity.toString());
             return new ResponseEntity(entity, HttpStatus.OK);

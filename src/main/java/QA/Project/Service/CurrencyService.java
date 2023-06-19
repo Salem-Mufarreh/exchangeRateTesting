@@ -1,6 +1,7 @@
 package QA.Project.Service;
 
 import QA.Project.Entity.CurrencyEntity;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -11,4 +12,5 @@ public interface CurrencyService {
     Double convertCurrency(String source, String target);
 
     CurrencyEntity getCurrency(Long id);
+    Boolean isEmpty(CurrencyEntity currency);
 }

@@ -3,10 +3,13 @@ package QA.Project.Service.Implemetation;
 import QA.Project.Entity.CurrencyEntity;
 import QA.Project.Repository.CurrencyRep;
 import QA.Project.Service.CurrencyService;
+import net.bytebuddy.implementation.bytecode.Throw;
+import org.hibernate.service.spi.InjectService;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
 
+import java.sql.Time;
 import java.util.List;
 import java.util.Random;
 
@@ -45,6 +48,9 @@ public class CurrencyImplement implements CurrencyService {
 
     @Override
     public Double convertCurrency(String source, String target) {
+        if(source.isEmpty() || target.isEmpty() ){
+            throw new IllegalArgumentException();
+        }
         CurrencyEntity Source = getCurrency(source);
         CurrencyEntity Target = getCurrency(target);
         double rate = (Target.rate/ Source.rate);
@@ -58,6 +64,17 @@ public class CurrencyImplement implements CurrencyService {
     public CurrencyEntity getCurrency(Long id) {
         CurrencyEntity entity = _CurrencyRepo.findById(id).orElseThrow(()-> new RuntimeException(String.valueOf(HttpStatus.NOT_FOUND)));
         return entity;
+    }
+
+    @Override
+    public Boolean isEmpty(CurrencyEntity currency) {
+        if(currency.getSourceCurrency()== null || currency.getTargetCurrency() == null
+            || currency.getDate() == null || currency.getRate()== null ){
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 
     public CurrencyEntity getCurrency(String name){
