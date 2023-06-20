@@ -38,8 +38,8 @@ public class ControllerTest {
         ResponseEntity response =  _CurrencyController.AddCurrency(entity);
         Assertions.assertEquals(response.getStatusCode(), HttpStatus.OK);
         Assertions.assertNotNull(response.getBody());
-
     }
+
     @Test
     @Order(3)
     public void RemoveCurrency(){
