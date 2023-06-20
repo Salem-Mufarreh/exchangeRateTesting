@@ -1,0 +1,486 @@
+{
+	"info": {
+		"_postman_id": "d58b8dc7-d69f-45b3-8bd1-834b7e81f687",
+		"name": "Exhange Rate Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26825334"
+	},
+	"item": [
+		{
+			"name": "Get All Reates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/currency/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"currency",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get All Rates",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/currency/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"currency",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Jun 2023 12:21:20 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"sourceCurrency\": \"Bahraini Dinar (BHD)\",\n        \"targetCurrency\": \"US Dollar (USD)\",\n        \"rate\": 2.65,\n        \"date\": \"2023-06-02T00:00:00.000+00:00\"\n    },\n    {\n        \"id\": 2,\n        \"sourceCurrency\": \"Kuwaiti Dinar (KWD)\",\n        \"targetCurrency\": \"US Dollar (USD)\",\n        \"rate\": 3.26,\n        \"date\": \"2023-06-02T00:00:00.000+00:00\"\n    },\n    {\n        \"id\": 3,\n        \"sourceCurrency\": \"Omani Rial (OMR)\",\n        \"targetCurrency\": \"US Dollar (USD)\",\n        \"rate\": 2.6,\n        \"date\": \"2023-06-02T00:00:00.000+00:00\"\n    },\n    {\n        \"id\": 4,\n        \"sourceCurrency\": \"Jordanian Dinar (JOD)\",\n        \"targetCurrency\": \"US Dollar (USD)\",\n        \"rate\": 1.16,\n        \"date\": \"2023-06-02T00:00:00.000+00:00\"\n    },\n    {\n        \"id\": 5,\n        \"sourceCurrency\": \"British Pound (GBP)\",\n        \"targetCurrency\": \"US Dollar (USD)\",\n        \"rate\": 1.28,\n        \"date\": \"2023-06-02T00:00:00.000+00:00\"\n    },\n    {\n        \"id\": 6,\n        \"sourceCurrency\": \"Swiss Franc (CHF)\",\n        \"targetCurrency\": \"US Dollar (USD)\",\n        \"rate\": 1.02,\n        \"date\": \"2023-06-02T00:00:00.000+00:00\"\n    },\n    {\n        \"id\": 7,\n        \"sourceCurrency\": \"Canadian Dollar (CAD)\",\n        \"targetCurrency\": \"US Dollar (USD)\",\n        \"rate\": 0.8,\n        \"date\": \"2023-06-02T00:00:00.000+00:00\"\n    },\n    {\n        \"id\": 8,\n        \"sourceCurrency\": \"Australian Dollar (AUD)\",\n        \"targetCurrency\": \"US Dollar (USD)\",\n        \"rate\": 0.73,\n        \"date\": \"2023-06-02T00:00:00.000+00:00\"\n    },\n    {\n        \"id\": 9,\n        \"sourceCurrency\": \"New Zealand Dollar (NZD)\",\n        \"targetCurrency\": \"US Dollar (USD)\",\n        \"rate\": 0.96,\n        \"date\": \"2023-06-02T00:00:00.000+00:00\"\n    },\n    {\n        \"id\": 11,\n        \"sourceCurrency\": \"Israeli New Shekel (ILS)\",\n        \"targetCurrency\": \"US Dollar (USD)\",\n        \"rate\": 3.74,\n        \"date\": \"2023-06-02T00:00:00.000+00:00\"\n    },\n    {\n        \"id\": 1102,\n        \"sourceCurrency\": \"US Dollar (USD)\",\n        \"targetCurrency\": \"US Dollar (USD)\",\n        \"rate\": 1,\n        \"date\": \"2023-06-19T18:28:58.583+00:00\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Add new Rate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 1,\r\n        \"sourceCurrency\": \"Bahraini Dinar (AED)\",\r\n        \"targetCurrency\": \"US Dollar (USD)\",\r\n        \"rate\": 3.67,\r\n        \"date\": \"2023-06-02T00:00:00.000+00:00\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/currency/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"currency",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "add new rate",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": 1,\r\n        \"sourceCurrency\": \"Bahraini Dinar (AED)\",\r\n        \"targetCurrency\": \"US Dollar (USD)\",\r\n        \"rate\": 3.67,\r\n        \"date\": \"2023-06-02T00:00:00.000+00:00\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/currency/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"currency",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Jun 2023 12:24:12 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1352,\n    \"sourceCurrency\": \"Bahraini Dinar (AED)\",\n    \"targetCurrency\": \"US Dollar (USD)\",\n    \"rate\": 3.67,\n    \"date\": \"2023-06-02T00:00:00.000+00:00\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Currency Rate By id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/currency/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"currency",
+						"2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Rate by Id",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/currency/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"currency",
+								"2"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Jun 2023 12:26:44 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"sourceCurrency\": \"Kuwaiti Dinar (KWD)\",\n    \"targetCurrency\": \"US Dollar (USD)\",\n    \"rate\": 3.26,\n    \"date\": \"2023-06-02T00:00:00.000+00:00\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Currency",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/currency/1352",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"currency",
+						"1352"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Currency",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/currency/1352",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"currency",
+								"1352"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Jun 2023 12:28:45 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Get Exchange rate",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/currency/convert?source=USD&target=ILS",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"currency",
+						"convert"
+					],
+					"query": [
+						{
+							"key": "source",
+							"value": "USD"
+						},
+						{
+							"key": "target",
+							"value": "ILS"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Exchange rate",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/currency/convert?source=USD&target=ILS",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"currency",
+								"convert"
+							],
+							"query": [
+								{
+									"key": "source",
+									"value": "USD"
+								},
+								{
+									"key": "target",
+									"value": "ILS"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Jun 2023 12:30:19 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "3.74"
+				}
+			]
+		},
+		{
+			"name": "Convert Pairs with amount ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/currency/convert?source=USD&target=ILS&amount=100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"currency",
+						"convert"
+					],
+					"query": [
+						{
+							"key": "source",
+							"value": "USD"
+						},
+						{
+							"key": "target",
+							"value": "ILS"
+						},
+						{
+							"key": "amount",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Convert Pairs with amount ",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/currency/convert?source=USD&target=ILS&amount=100",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"currency",
+								"convert"
+							],
+							"query": [
+								{
+									"key": "source",
+									"value": "USD"
+								},
+								{
+									"key": "target",
+									"value": "ILS"
+								},
+								{
+									"key": "amount",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 20 Jun 2023 12:33:28 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "374"
+				}
+			]
+		}
+	]
+}

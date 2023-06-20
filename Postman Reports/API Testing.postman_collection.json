@@ -1,0 +1,668 @@
+{
+	"info": {
+		"_postman_id": "df1c8d00-f250-423f-ade2-418289bba029",
+		"name": "API Testing",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26825334"
+	},
+	"item": [
+		{
+			"name": "Currency Conversion Success",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://v6.exchangerate-api.com/v6/d5dac668682f36305b400ef0/pair/USD/ILS/100",
+					"protocol": "https",
+					"host": [
+						"v6",
+						"exchangerate-api",
+						"com"
+					],
+					"path": [
+						"v6",
+						"d5dac668682f36305b400ef0",
+						"pair",
+						"USD",
+						"ILS",
+						"100"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Currency Conversion Success Example",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://v6.exchangerate-api.com/v6/d5dac668682f36305b400ef0/pair/USD/ILS/100",
+							"protocol": "https",
+							"host": [
+								"v6",
+								"exchangerate-api",
+								"com"
+							],
+							"path": [
+								"v6",
+								"d5dac668682f36305b400ef0",
+								"pair",
+								"USD",
+								"ILS",
+								"100"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 20 Jun 2023 12:05:45 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "NOSNIFF"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=zFJl2UGa3lYVpUjCPray4IwSGgdbipvzs4mdp3Qut9cgueaimTdnQICxDGU4DX7FZ7HeoUgaCohBmziGoGG05cQbUT5JdgQPT8sxmXP7TBIjIXE4PsHxWb0IamzAbp1BeJCE4qS%2Bkgia\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7da3e1bd1b96cd51-ZDM"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"success\",\n    \"documentation\": \"https://www.exchangerate-api.com/docs\",\n    \"terms_of_use\": \"https://www.exchangerate-api.com/terms\",\n    \"time_last_update_unix\": 1687219202,\n    \"time_last_update_utc\": \"Tue, 20 Jun 2023 00:00:02 +0000\",\n    \"time_next_update_unix\": 1687305602,\n    \"time_next_update_utc\": \"Wed, 21 Jun 2023 00:00:02 +0000\",\n    \"base_code\": \"USD\",\n    \"target_code\": \"ILS\",\n    \"conversion_rate\": 3.6164,\n    \"conversion_result\": 361.64\n}"
+				}
+			]
+		},
+		{
+			"name": "Unsupported Currecny",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://v6.exchangerate-api.com/v6/d5dac668682f36305b400ef0/pair/USD/KPW/100",
+					"protocol": "https",
+					"host": [
+						"v6",
+						"exchangerate-api",
+						"com"
+					],
+					"path": [
+						"v6",
+						"d5dac668682f36305b400ef0",
+						"pair",
+						"USD",
+						"KPW",
+						"100"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Unsupported Currecny",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://v6.exchangerate-api.com/v6/d5dac668682f36305b400ef0/pair/USD/KPW/100",
+							"protocol": "https",
+							"host": [
+								"v6",
+								"exchangerate-api",
+								"com"
+							],
+							"path": [
+								"v6",
+								"d5dac668682f36305b400ef0",
+								"pair",
+								"USD",
+								"KPW",
+								"100"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 20 Jun 2023 12:07:58 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=qz5SQ%2F3p0piDI8B9y%2Fk9lzG14Mr4tCYOXX5YFggvZu0atWKlAGzI%2BKhYWn2P8AdGWty51VhJDF88TmRn1d4hDFvyhIusfnWX7dYTC7wbe9oUqb%2Bs%2Fiuij4fCF0JkqL4V%2Bj95mLlzdgVq\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7da3e4fe8cbccd51-ZDM"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"error\",\n    \"documentation\": \"https://www.exchangerate-api.com/docs\",\n    \"terms-of-use\": \"https://www.exchangerate-api.com/terms\",\n    \"error-type\": \"unsupported-code\"\n}"
+				}
+			]
+		},
+		{
+			"name": "invalid-key",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://v6.exchangerate-api.com/v6/d5dac668682f36305b400ef00/pair/USD/ILS/",
+					"protocol": "https",
+					"host": [
+						"v6",
+						"exchangerate-api",
+						"com"
+					],
+					"path": [
+						"v6",
+						"d5dac668682f36305b400ef00",
+						"pair",
+						"USD",
+						"ILS",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "invalid-key",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://v6.exchangerate-api.com/v6/d5dac668682f36305b400ef00/pair/USD/ILS/",
+							"protocol": "https",
+							"host": [
+								"v6",
+								"exchangerate-api",
+								"com"
+							],
+							"path": [
+								"v6",
+								"d5dac668682f36305b400ef00",
+								"pair",
+								"USD",
+								"ILS",
+								""
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 20 Jun 2023 12:12:13 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=YsIArUjtwrZ43CF44pkUi0lhey%2B%2BGE497jAN6uzIxsz5pAAd8hSZdusUAD2manBZJQHiYgcnpUewKSKnP2IrgcDTvUsRybvT55bDUI3TCG3n2goYRo6z6oISGeKhIS503RaOqBZWBHkv\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7da3eb379c9acd51-ZDM"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"error\",\n    \"documentation\": \"https://www.exchangerate-api.com/docs\",\n    \"terms-of-use\": \"https://www.exchangerate-api.com/terms\",\n    \"error-type\": \"invalid-key\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Latest Rates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://v6.exchangerate-api.com/v6/d5dac668682f36305b400ef0/latest/USD",
+					"protocol": "https",
+					"host": [
+						"v6",
+						"exchangerate-api",
+						"com"
+					],
+					"path": [
+						"v6",
+						"d5dac668682f36305b400ef0",
+						"latest",
+						"USD"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Latest Rates",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://v6.exchangerate-api.com/v6/d5dac668682f36305b400ef0/latest/USD",
+							"protocol": "https",
+							"host": [
+								"v6",
+								"exchangerate-api",
+								"com"
+							],
+							"path": [
+								"v6",
+								"d5dac668682f36305b400ef0",
+								"latest",
+								"USD"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 20 Jun 2023 12:13:22 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "NOSNIFF"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=ER%2Fsj0rKik8UpAdYoILij42ZSPvzXNiMIGFiTCR2SXmNe9he4PfsGMrZvR8XcZbJgtGaexv6zIOkArnGubY2HOFQktSNiU9l6MCKHKlOXqgajpR8YH1NpspeCalnAnJi7jQsH3GjCGZH\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7da3ece7bf57cd51-ZDM"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"success\",\n    \"documentation\": \"https://www.exchangerate-api.com/docs\",\n    \"terms_of_use\": \"https://www.exchangerate-api.com/terms\",\n    \"time_last_update_unix\": 1687219202,\n    \"time_last_update_utc\": \"Tue, 20 Jun 2023 00:00:02 +0000\",\n    \"time_next_update_unix\": 1687305602,\n    \"time_next_update_utc\": \"Wed, 21 Jun 2023 00:00:02 +0000\",\n    \"base_code\": \"USD\",\n    \"conversion_rates\": {\n        \"USD\": 1,\n        \"AED\": 3.6725,\n        \"AFN\": 85.8623,\n        \"ALL\": 98.7184,\n        \"AMD\": 386.36,\n        \"ANG\": 1.79,\n        \"AOA\": 733.401,\n        \"ARS\": 249.0743,\n        \"AUD\": 1.46,\n        \"AWG\": 1.79,\n        \"AZN\": 1.6979,\n        \"BAM\": 1.7909,\n        \"BBD\": 2,\n        \"BDT\": 108.2212,\n        \"BGN\": 1.7909,\n        \"BHD\": 0.376,\n        \"BIF\": 2809.1332,\n        \"BMD\": 1,\n        \"BND\": 1.3409,\n        \"BOB\": 6.9167,\n        \"BRL\": 4.8191,\n        \"BSD\": 1,\n        \"BTN\": 81.9545,\n        \"BWP\": 13.3054,\n        \"BYN\": 2.7584,\n        \"BZD\": 2,\n        \"CAD\": 1.3208,\n        \"CDF\": 2263.2948,\n        \"CHF\": 0.8957,\n        \"CLP\": 794.2938,\n        \"CNY\": 7.1603,\n        \"COP\": 4154.9955,\n        \"CRC\": 540.5258,\n        \"CUP\": 24,\n        \"CVE\": 100.966,\n        \"CZK\": 21.7543,\n        \"DJF\": 177.721,\n        \"DKK\": 6.8312,\n        \"DOP\": 54.8916,\n        \"DZD\": 135.5914,\n        \"EGP\": 30.8895,\n        \"ERN\": 15,\n        \"ETB\": 54.9748,\n        \"EUR\": 0.9157,\n        \"FJD\": 2.2041,\n        \"FKP\": 0.7814,\n        \"FOK\": 6.8312,\n        \"GBP\": 0.7814,\n        \"GEL\": 2.6047,\n        \"GGP\": 0.7814,\n        \"GHS\": 11.5817,\n        \"GIP\": 0.7814,\n        \"GMD\": 62.5931,\n        \"GNF\": 8526.4574,\n        \"GTQ\": 7.83,\n        \"GYD\": 211.4626,\n        \"HKD\": 7.8166,\n        \"HNL\": 24.5983,\n        \"HRK\": 6.8991,\n        \"HTG\": 139.471,\n        \"HUF\": 342.0504,\n        \"IDR\": 15006.3562,\n        \"ILS\": 3.6164,\n        \"IMP\": 0.7814,\n        \"INR\": 81.9545,\n        \"IQD\": 1311.1899,\n        \"IRR\": 41989.668,\n        \"ISK\": 136.5601,\n        \"JEP\": 0.7814,\n        \"JMD\": 154.3128,\n        \"JOD\": 0.709,\n        \"JPY\": 141.8795,\n        \"KES\": 140.0421,\n        \"KGS\": 87.5685,\n        \"KHR\": 4144.9298,\n        \"KID\": 1.4602,\n        \"KMF\": 450.4787,\n        \"KRW\": 1281.6693,\n        \"KWD\": 0.3071,\n        \"KYD\": 0.8333,\n        \"KZT\": 447.9764,\n        \"LAK\": 18228.1913,\n        \"LBP\": 15000,\n        \"LKR\": 304.83,\n        \"LRD\": 176.7306,\n        \"LSL\": 18.1849,\n        \"LYD\": 4.813,\n        \"MAD\": 9.9916,\n        \"MDL\": 17.9073,\n        \"MGA\": 4512.2964,\n        \"MKD\": 56.2834,\n        \"MMK\": 2099.3762,\n        \"MNT\": 3486.1069,\n        \"MOP\": 8.051,\n        \"MRU\": 34.5518,\n        \"MUR\": 45.3236,\n        \"MVR\": 15.4565,\n        \"MWK\": 1030.4136,\n        \"MXN\": 17.0887,\n        \"MYR\": 4.6207,\n        \"MZN\": 64.0391,\n        \"NAD\": 18.1849,\n        \"NGN\": 654.222,\n        \"NIO\": 36.5551,\n        \"NOK\": 10.6635,\n        \"NPR\": 131.1272,\n        \"NZD\": 1.612,\n        \"OMR\": 0.3845,\n        \"PAB\": 1,\n        \"PEN\": 3.625,\n        \"PGK\": 3.5825,\n        \"PHP\": 55.7407,\n        \"PKR\": 286.9715,\n        \"PLN\": 4.0735,\n        \"PYG\": 7269.4482,\n        \"QAR\": 3.64,\n        \"RON\": 4.5413,\n        \"RSD\": 107.3462,\n        \"RUB\": 84.0486,\n        \"RWF\": 1182.6543,\n        \"SAR\": 3.75,\n        \"SBD\": 8.4985,\n        \"SCR\": 13.7049,\n        \"SDG\": 528.428,\n        \"SEK\": 10.7286,\n        \"SGD\": 1.3409,\n        \"SHP\": 0.7814,\n        \"SLE\": 22.6637,\n        \"SLL\": 22663.6701,\n        \"SOS\": 568.2151,\n        \"SRD\": 37.7722,\n        \"SSP\": 984.4141,\n        \"STN\": 22.4338,\n        \"SYP\": 2514.2638,\n        \"SZL\": 18.1849,\n        \"THB\": 34.7525,\n        \"TJS\": 10.882,\n        \"TMT\": 3.4999,\n        \"TND\": 3.0848,\n        \"TOP\": 2.3002,\n        \"TRY\": 23.6213,\n        \"TTD\": 6.7726,\n        \"TVD\": 1.4602,\n        \"TWD\": 30.7976,\n        \"TZS\": 2396.2202,\n        \"UAH\": 36.9086,\n        \"UGX\": 3699.8613,\n        \"UYU\": 38.2165,\n        \"UZS\": 11421.7262,\n        \"VES\": 27.278,\n        \"VND\": 23521.2432,\n        \"VUV\": 118.1923,\n        \"WST\": 2.7029,\n        \"XAF\": 600.6383,\n        \"XCD\": 2.7,\n        \"XDR\": 0.7474,\n        \"XOF\": 600.6383,\n        \"XPF\": 109.2684,\n        \"YER\": 250.1439,\n        \"ZAR\": 18.1848,\n        \"ZMW\": 19.411,\n        \"ZWL\": 6705.3459\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "inactive account",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://v6.exchangerate-api.com/v6/d5dac668682f36305b400ef00/pair/USD/ILS/0",
+					"protocol": "https",
+					"host": [
+						"v6",
+						"exchangerate-api",
+						"com"
+					],
+					"path": [
+						"v6",
+						"d5dac668682f36305b400ef00",
+						"pair",
+						"USD",
+						"ILS",
+						"0"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://v6.exchangerate-api.com/v6/d5dac668682f36305b400ef00/pair/USD/ILS/0",
+							"protocol": "https",
+							"host": [
+								"v6",
+								"exchangerate-api",
+								"com"
+							],
+							"path": [
+								"v6",
+								"d5dac668682f36305b400ef00",
+								"pair",
+								"USD",
+								"ILS",
+								"0"
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 20 Jun 2023 12:14:14 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Access-Control-Allow-Headers",
+							"value": "*"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=EFxxPZUK6hFNf50gPcZdxfRAUaXozLpxiODnvum8e346mEXuY%2FtJnzf1XjI0suhNirZzV8VYJOcf3c6AkDBAYwo26uU28D8YpruCzmreWPF%2FU0qESJ5vMsZv%2Fy5UGqRqqiBJDUksq4fa\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7da3ee29bf34cd51-ZDM"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"result\": \"error\",\n    \"documentation\": \"https://www.exchangerate-api.com/docs\",\n    \"terms-of-use\": \"https://www.exchangerate-api.com/terms\",\n    \"error-type\": \"inactive-account\",\n    \"extra-info\": \"Please contact support.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "negative amount",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://v6.exchangerate-api.com/v6/d5dac668682f36305b400ef00/pair/USD/ILS/-10.2",
+					"protocol": "https",
+					"host": [
+						"v6",
+						"exchangerate-api",
+						"com"
+					],
+					"path": [
+						"v6",
+						"d5dac668682f36305b400ef00",
+						"pair",
+						"USD",
+						"ILS",
+						"-10.2"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://v6.exchangerate-api.com/v6/d5dac668682f36305b400ef00/pair/USD/ILS/-10.2",
+							"protocol": "https",
+							"host": [
+								"v6",
+								"exchangerate-api",
+								"com"
+							],
+							"path": [
+								"v6",
+								"d5dac668682f36305b400ef00",
+								"pair",
+								"USD",
+								"ILS",
+								"-10.2"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Tue, 20 Jun 2023 12:14:46 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "CF-Cache-Status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Report-To",
+							"value": "{\"endpoints\":[{\"url\":\"https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=X9RRIFGjhwebCN9JpECS93ATNWBZ%2FX0fS4NQkdoMjFn7nGxEOtA1mrg9Ot6TNRVk20ikD2dMrEfMCFdQ7xnTiuY7bEwYFKDCoRkkUCSZF1CvDGJVyMYuO6T%2BwA9xhaTkTWjYwyNXTEVO\"}],\"group\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "NEL",
+							"value": "{\"success_fraction\":0,\"report_to\":\"cf-nel\",\"max_age\":604800}"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "7da3eef57882cd51-ZDM"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "<html>\n    <head>\n        <title>404 Not Found</title>\n    </head>\n    <body>\n        <center>\n            <h1>404 Not Found</h1>\n        </center>\n        <hr>\n        <center>nginx</center>\n    </body>\n</html>"
+				}
+			]
+		}
+	]
+}

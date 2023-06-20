@@ -4,113 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="025810bf-2491-4253-9fac-ce6326529d8d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gradle/7.6.1/checksums/md5-checksums.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gradle/7.6.1/checksums/sha1-checksums.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/QA/Project/Tests/ControllerTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/QA/Project/Tests/DataBaseTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/test/QA/Project/ControllerTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/classes/java/test/QA/Project/DataBaseTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/jacoco/test.exec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/QA.Project.Config/AppConfig.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/QA.Project.Config/AppConfig.java.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/QA.Project.Config/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/QA.Project.Config/index.source.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/QA.Project.Controller/CurrencyController.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/QA.Project.Controller/CurrencyController.java.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/QA.Project.Controller/GUIController.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/QA.Project.Controller/GUIController.java.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/QA.Project.Controller/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/QA.Project.Controller/index.source.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/QA.Project.Entity/CurrencyEntity.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/QA.Project.Entity/CurrencyEntity.java.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/QA.Project.Entity/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/QA.Project.Entity/index.source.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/QA.Project.Service.Implemetation/CurrencyImplement.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/QA.Project.Service.Implemetation/CurrencyImplement.java.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/QA.Project.Service.Implemetation/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/QA.Project.Service.Implemetation/index.source.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/QA.Project.Tests/ControllerTest.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/QA.Project.Tests/ControllerTest.java.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/QA.Project.Tests/DataBaseTest.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/QA.Project.Tests/DataBaseTest.java.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/QA.Project.Tests/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/QA.Project.Tests/index.source.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/QA.Project/ProjectTestingApplication.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/QA.Project/ProjectTestingApplication.java.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/QA.Project/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/QA.Project/index.source.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/jacoco-resources/branchfc.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/jacoco-resources/branchnc.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/jacoco-resources/branchpc.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/jacoco-resources/bundle.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/jacoco-resources/class.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/jacoco-resources/down.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/jacoco-resources/greenbar.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/jacoco-resources/group.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/jacoco-resources/method.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/jacoco-resources/package.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/jacoco-resources/prettify.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/jacoco-resources/prettify.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/jacoco-resources/redbar.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/jacoco-resources/report.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/jacoco-resources/report.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/jacoco-resources/session.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/jacoco-resources/sort.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/jacoco-resources/sort.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/jacoco-resources/source.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/jacoco-resources/up.gif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/jacoco/test/html/jacoco-sessions.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/QA.Project.ControllerTest.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/QA.Project.DataBaseTest.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/test-results/test/TEST-QA.Project.ControllerTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/test-results/test/TEST-QA.Project.DataBaseTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/expandedArchives/org.jacoco.agent-0.8.7.jar_3a83c50b4a016f281c4e9f3500d16b55/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/expandedArchives/org.jacoco.agent-0.8.7.jar_3a83c50b4a016f281c4e9f3500d16b55/META-INF/maven/org.jacoco/org.jacoco.agent/pom.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/expandedArchives/org.jacoco.agent-0.8.7.jar_3a83c50b4a016f281c4e9f3500d16b55/META-INF/maven/org.jacoco/org.jacoco.agent/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/expandedArchives/org.jacoco.agent-0.8.7.jar_3a83c50b4a016f281c4e9f3500d16b55/about.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/expandedArchives/org.jacoco.agent-0.8.7.jar_3a83c50b4a016f281c4e9f3500d16b55/jacocoagent.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/expandedArchives/org.jacoco.agent-0.8.7.jar_3a83c50b4a016f281c4e9f3500d16b55/org/jacoco/agent/AgentJar.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/QA/Project/Tests/ControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/QA/Project/Tests/DataBaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/QA/Project/ControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/QA/Project/DataBaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+    <list default="true" id="025810bf-2491-4253-9fac-ce6326529d8d" name="Changes" comment="task1">
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/QA/Project/Controller/CurrencyController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/QA/Project/Controller/CurrencyController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/QA/Project/Service/CurrencyService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/QA/Project/Service/CurrencyService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/QA/Project/Service/Implemetation/CurrencyImplement.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/QA/Project/Service/Implemetation/CurrencyImplement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/test/QA/Project/ProjectTestingApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/QA/Project/ProjectTestingApplicationTests.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/Project-0.0.1-SNAPSHOT-plain.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/Project-0.0.1-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/QA.Project.ProjectTestingApplicationTests.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/QA.Project.ProjectTestingApplicationTests.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/QA.Project.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/QA.Project.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resolvedMainClassName" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-QA.Project.ProjectTestingApplicationTests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-QA.Project.ProjectTestingApplicationTests.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/output.bin.idx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/bootJar/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/GUIController.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileTestJava/previous-compilation-data.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/jar/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/QA/Project/Controller/CurrencyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QA/Project/Controller/CurrencyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/QA/Project/Service/CurrencyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QA/Project/Service/CurrencyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/QA/Project/Service/Implemetation/CurrencyImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/QA/Project/Service/Implemetation/CurrencyImplement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/QA/Project/ProjectTestingApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/QA/Project/ProjectTestingApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,29 +63,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Birzeit/QA/exchangeRateTesting2/src/test/java/QA/Project",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.build.tools.auto.reload": "SELECTIVE",
-    "settings.editor.selected.configurable": "build.tools",
-    "spring.configuration.checksum": "88b5bb766583002a8ec23f9eea39b610",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Birzeit/QA/exchangeRateTesting2/src/test/java/QA/Project&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.build.tools.auto.reload&quot;: &quot;SELECTIVE&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;build.tools&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;88b5bb766583002a8ec23f9eea39b610&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Birzeit\QA\exchangeRateTesting2\src\test\java\QA\Project" />
@@ -204,7 +100,7 @@
       <command value="gradle build" />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DataBaseTest">
+  <component name="RunManager" selected="Spring Boot.ProjectTestingApplication">
     <configuration name="DataBaseTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -334,8 +230,17 @@
       <workItem from="1687000456866" duration="1918000" />
       <workItem from="1687003698840" duration="2103000" />
       <workItem from="1687021680720" duration="3794000" />
-      <workItem from="1687181174263" duration="16707000" />
+      <workItem from="1687181174263" duration="17459000" />
+      <workItem from="1687261666380" duration="1518000" />
     </task>
+    <task id="LOCAL-00001" summary="task1">
+      <created>1687199959328</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1687199959328</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -359,10 +264,26 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="task1" />
+    <option name="LAST_COMMIT_MESSAGE" value="task1" />
   </component>
 </project>
