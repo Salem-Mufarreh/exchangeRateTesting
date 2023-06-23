@@ -18,6 +18,9 @@ configurations {
 
 repositories {
 	mavenCentral()
+	maven {
+		url "https://repo.maven.apache.org/maven2"
+	}
 }
 jacoco {
 	toolVersion ="0.8.7"
@@ -30,6 +33,7 @@ jacocoTestReport{
 		html.enabled true
 	}
 }
+
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
@@ -40,6 +44,7 @@ dependencies {
 	implementation 'au.com.dius:pact-jvm-provider-spring_2.12:3.6.15'
 	implementation 'au.com.dius:pact-jvm-provider-spring_2.12:3.6.15'
 	implementation 'au.com.dius:pact-jvm-provider-spring_2.11:3.5.24'
+	implementation 'org.seleniumhq.selenium:selenium-java:4.9.1'
 	testImplementation 'junit:junit:4.13.1'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'

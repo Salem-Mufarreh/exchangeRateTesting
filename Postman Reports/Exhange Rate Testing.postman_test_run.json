@@ -1,0 +1,262 @@
+{
+	"id": "7b71f11c-c879-4fb3-8eb3-e7f489edb678",
+	"name": "Exhange Rate Testing",
+	"timestamp": "2023-06-20T17:23:14.519Z",
+	"collection_id": "26825334-d58b8dc7-d69f-45b3-8bd1-834b7e81f687",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-06-20T17:23:07.699Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "a34d2dfa-dcac-4d65-bfdc-a81720e53722",
+			"name": "Get All Reates",
+			"url": "http://localhost:8080/api/currency/",
+			"time": 48,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				264,
+				15,
+				29,
+				37,
+				46,
+				65,
+				54,
+				51,
+				49,
+				48
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		},
+		{
+			"id": "9efce094-50c1-4f18-b64a-45936c4d3e32",
+			"name": "Add new Rate",
+			"url": "http://localhost:8080/api/currency/",
+			"time": 42,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				142,
+				17,
+				30,
+				36,
+				40,
+				47,
+				44,
+				43,
+				44,
+				42
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		},
+		{
+			"id": "492fa40c-ad39-425c-a11b-4ca1b7d2844a",
+			"name": "Get Currency Rate By id",
+			"url": "http://localhost:8080/api/currency/2",
+			"time": 27,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				10,
+				12,
+				22,
+				23,
+				26,
+				29,
+				38,
+				32,
+				29,
+				27
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		},
+		{
+			"id": "0f33b5e7-79a9-4024-9dc0-28051795fbcd",
+			"name": "Delete Currency",
+			"url": "http://localhost:8080/api/currency/1352",
+			"time": 39,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				32,
+				22,
+				26,
+				51,
+				39,
+				40,
+				48,
+				45,
+				44,
+				39
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		},
+		{
+			"id": "a1edb48c-f106-4104-9b87-cb7cde8a2a74",
+			"name": "Get Exchange rate",
+			"url": "http://localhost:8080/api/currency/convert?source=USD&target=ILS",
+			"time": 45,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				48,
+				22,
+				33,
+				44,
+				41,
+				43,
+				54,
+				40,
+				44,
+				45
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		},
+		{
+			"id": "559d3e43-56ce-40cc-936e-07f9c61099ce",
+			"name": "Convert Pairs with amount ",
+			"url": "http://localhost:8080/api/currency/convert?source=USD&target=ILS&amount=100",
+			"time": 32,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				11,
+				25,
+				31,
+				40,
+				40,
+				36,
+				39,
+				33,
+				35,
+				32
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		}
+	],
+	"count": 10,
+	"totalTime": 2513,
+	"collection": {
+		"requests": [
+			{
+				"id": "a34d2dfa-dcac-4d65-bfdc-a81720e53722",
+				"method": "GET"
+			},
+			{
+				"id": "9efce094-50c1-4f18-b64a-45936c4d3e32",
+				"method": "POST"
+			},
+			{
+				"id": "492fa40c-ad39-425c-a11b-4ca1b7d2844a",
+				"method": "GET"
+			},
+			{
+				"id": "0f33b5e7-79a9-4024-9dc0-28051795fbcd",
+				"method": "DELETE"
+			},
+			{
+				"id": "a1edb48c-f106-4104-9b87-cb7cde8a2a74",
+				"method": "GET"
+			},
+			{
+				"id": "559d3e43-56ce-40cc-936e-07f9c61099ce",
+				"method": "GET"
+			}
+		]
+	}
+}

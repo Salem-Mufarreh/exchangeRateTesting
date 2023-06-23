@@ -1,0 +1,326 @@
+{
+  "id": "d1ec0628-2958-4159-af11-d00464124c38",
+  "version": "2.0",
+  "name": "Currency Conversion",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "3db98325-2f51-4983-ae6f-e146ed707ad8",
+    "name": "Success Conversion ",
+    "commands": [{
+      "id": "5d6ab0a4-10a0-4b1d-8095-a22bd32f7483",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bcdbb723-f601-4c41-b5d3-3abddc9caecc",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "887x760",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "31246cc8-9e98-40b8-9272-1a0cec5e0c3b",
+      "comment": "",
+      "command": "click",
+      "target": "id=amount",
+      "targets": [
+        ["id=amount", "id"],
+        ["name=amount", "name"],
+        ["css=#amount", "css:finder"],
+        ["xpath=//input[@id='amount']", "xpath:attributes"],
+        ["xpath=//form[@id='conversionForm']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4d55e6f8-2524-4685-8bb9-bccdeda39a62",
+      "comment": "",
+      "command": "type",
+      "target": "id=amount",
+      "targets": [
+        ["id=amount", "id"],
+        ["name=amount", "name"],
+        ["css=#amount", "css:finder"],
+        ["xpath=//input[@id='amount']", "xpath:attributes"],
+        ["xpath=//form[@id='conversionForm']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "100"
+    }, {
+      "id": "5438cfde-c288-4ff4-9359-eb4822dd2928",
+      "comment": "",
+      "command": "type",
+      "target": "id=from",
+      "targets": [
+        ["id=from", "id"],
+        ["name=source", "name"],
+        ["css=#from", "css:finder"],
+        ["xpath=//input[@id='from']", "xpath:attributes"],
+        ["xpath=//form[@id='conversionForm']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "USD"
+    }, {
+      "id": "e337537a-e290-4a08-88cf-2574bc88d18e",
+      "comment": "",
+      "command": "type",
+      "target": "id=to",
+      "targets": [
+        ["id=to", "id"],
+        ["name=target", "name"],
+        ["css=#to", "css:finder"],
+        ["xpath=//input[@id='to']", "xpath:attributes"],
+        ["xpath=//form[@id='conversionForm']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "ILS"
+    }, {
+      "id": "88658c31-32b5-4608-a979-7ee34bdfcac9",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='conversionForm']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Convert')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4f790a92-1aba-4d96-9066-39ab6e48b73e",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=toastr",
+      "targets": [
+        ["id=toastr", "id"],
+        ["css=#toastr", "css:finder"],
+        ["xpath=//div[@id='toastr']", "xpath:attributes"],
+        ["xpath=//div[3]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "04400413-d07a-44c4-b785-5d2306dd387b",
+      "comment": "",
+      "command": "verifyText",
+      "target": "id=toastr",
+      "targets": [
+        ["id=toastr", "id"],
+        ["css=#toastr", "css:finder"],
+        ["xpath=//div[@id='toastr']", "xpath:attributes"],
+        ["xpath=//div[4]/div/div/div", "xpath:position"]
+      ],
+      "value": "Conversion successful"
+    }]
+  }, {
+    "id": "7e140e03-a1fb-4b4c-ab13-addf7bdd9a6a",
+    "name": "Failed Conversion ",
+    "commands": [{
+      "id": "59d77133-b76a-4841-8fcd-66ef9c06c22d",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d38876ea-53a7-4a47-83bf-f8a4e26e3d4d",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "889x760",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2a7dbe6f-bdd0-440c-a437-1c7f12f0c1c3",
+      "comment": "",
+      "command": "click",
+      "target": "id=amount",
+      "targets": [
+        ["id=amount", "id"],
+        ["name=amount", "name"],
+        ["css=#amount", "css:finder"],
+        ["xpath=//input[@id='amount']", "xpath:attributes"],
+        ["xpath=//form[@id='conversionForm']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "847caca2-bde5-4a21-95a9-8db2729433b5",
+      "comment": "",
+      "command": "type",
+      "target": "id=amount",
+      "targets": [
+        ["id=amount", "id"],
+        ["name=amount", "name"],
+        ["css=#amount", "css:finder"],
+        ["xpath=//input[@id='amount']", "xpath:attributes"],
+        ["xpath=//form[@id='conversionForm']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "100"
+    }, {
+      "id": "d9f9caed-0a38-463f-9910-bfca3efd6666",
+      "comment": "",
+      "command": "type",
+      "target": "id=from",
+      "targets": [
+        ["id=from", "id"],
+        ["name=source", "name"],
+        ["css=#from", "css:finder"],
+        ["xpath=//input[@id='from']", "xpath:attributes"],
+        ["xpath=//form[@id='conversionForm']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "USDa"
+    }, {
+      "id": "8207332f-4c21-46ba-9c39-509d4e34376f",
+      "comment": "",
+      "command": "type",
+      "target": "id=to",
+      "targets": [
+        ["id=to", "id"],
+        ["name=target", "name"],
+        ["css=#to", "css:finder"],
+        ["xpath=//input[@id='to']", "xpath:attributes"],
+        ["xpath=//form[@id='conversionForm']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "ILS"
+    }, {
+      "id": "55fd39dc-8bbd-4549-93fc-b51a6a3a4665",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='conversionForm']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Convert')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "18fdd7bf-6fb7-4a14-8c95-f24da6948f2b",
+      "comment": "",
+      "command": "verifyElementPresent",
+      "target": "id=toastr",
+      "targets": [
+        ["id=toastr", "id"],
+        ["css=#toastr", "css:finder"],
+        ["xpath=//div[@id='toastr']", "xpath:attributes"],
+        ["xpath=//div[3]/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9faddb87-765d-450d-a34e-47359bf84fd4",
+      "comment": "",
+      "command": "verifyText",
+      "target": "id=toastr",
+      "targets": [
+        ["id=toastr", "id"],
+        ["css=#toastr", "css:finder"],
+        ["xpath=//div[@id='toastr']", "xpath:attributes"],
+        ["xpath=//div[4]/div/div/div", "xpath:position"]
+      ],
+      "value": "Conversion Failed"
+    }]
+  }, {
+    "id": "b4db7455-55b8-4bc2-87c4-6337f2096444",
+    "name": "minus Amount ",
+    "commands": [{
+      "id": "372d2b77-22eb-4a67-9aaf-c0a749452621",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1c66bff7-85e0-46e8-aed7-319da0f6b150",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "886x756",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a2105051-114d-416f-99ac-4266005361f8",
+      "comment": "",
+      "command": "click",
+      "target": "id=amount",
+      "targets": [
+        ["id=amount", "id"],
+        ["name=amount", "name"],
+        ["css=#amount", "css:finder"],
+        ["xpath=//input[@id='amount']", "xpath:attributes"],
+        ["xpath=//form[@id='conversionForm']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "961c64cb-fdee-4950-8173-0f0c85736503",
+      "comment": "",
+      "command": "type",
+      "target": "id=amount",
+      "targets": [
+        ["id=amount", "id"],
+        ["name=amount", "name"],
+        ["css=#amount", "css:finder"],
+        ["xpath=//input[@id='amount']", "xpath:attributes"],
+        ["xpath=//form[@id='conversionForm']/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "-100"
+    }, {
+      "id": "c1b9ad98-0a1c-46eb-a90b-5a9b8f63534f",
+      "comment": "",
+      "command": "type",
+      "target": "id=from",
+      "targets": [
+        ["id=from", "id"],
+        ["name=source", "name"],
+        ["css=#from", "css:finder"],
+        ["xpath=//input[@id='from']", "xpath:attributes"],
+        ["xpath=//form[@id='conversionForm']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "USD"
+    }, {
+      "id": "3fa627d8-616e-47b8-a899-d05b9e9453ef",
+      "comment": "",
+      "command": "type",
+      "target": "id=to",
+      "targets": [
+        ["id=to", "id"],
+        ["name=target", "name"],
+        ["css=#to", "css:finder"],
+        ["xpath=//input[@id='to']", "xpath:attributes"],
+        ["xpath=//form[@id='conversionForm']/div[3]/input", "xpath:idRelative"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "ILS"
+    }, {
+      "id": "e3d5b6e7-36fc-437a-acdf-e79bf73c06f4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//form[@id='conversionForm']/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Convert')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "a9451e4f-f6f9-49fd-8a73-04b9985e50c7",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["3db98325-2f51-4983-ae6f-e146ed707ad8"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}

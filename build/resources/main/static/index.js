@@ -24,7 +24,7 @@ function convertCurrency(amount, sourceCurrency, targetCurrency) {
         success: function(response) {
             // Handle the response from the server
 
-            toastrElement.style.backgroundColor = "green";
+            toastrElement.classList.add("alert-success")
             toastrElement.innerText = "Conversion successful";
             toastrElement.hidden = false;
             console.log(response);
@@ -35,7 +35,8 @@ function convertCurrency(amount, sourceCurrency, targetCurrency) {
             $("#rate").text("Conversion Rate: "+rate);
         },
         error: function(error) {
-            toastrElement.style.backgroundColor = "red";
+            toastrElement.classList.add("alert-danger")
+
             toastrElement.innerText = "Conversion Failed";
             toastrElement.hidden = false;
             // Handle any errors that occurred during the AJAX request
