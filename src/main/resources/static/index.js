@@ -44,3 +44,33 @@ function convertCurrency(amount, sourceCurrency, targetCurrency) {
         }
     });
 }
+
+
+// Create an XMLHttpRequest object
+let xhr = new XMLHttpRequest();
+
+// Configure the request
+xhr.open('GET', 'http://localhost:8080/api/currency/');
+
+// Set the response type
+xhr.responseType = 'json';
+
+// Define the success callback function
+xhr.onload = function() {
+    if (xhr.status === 200) {
+        // Retrieve the currency list element
+        let currencyList = document.getElementById("currencyList");
+
+        // Iterate over the currencies and create a list item for each currency
+        xhr.response.forEach(currency => {
+            let listItem = document.createElement("li");
+            listItem.textContent = currency.sourceCurrency + " to " + currency.targetCurrency + ": " + currency.rate;
+            currencyList.appendChild(listItem);
+        });
+    } else {
+        console.error("Error fetching currencies:", xhr.status);
+    }
+};
+
+// Send the request
+xhr.send();
